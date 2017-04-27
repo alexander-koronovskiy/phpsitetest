@@ -1,8 +1,8 @@
 <?php
 
 return array(
-		'host' => 'localhost',
-		'dbname' => 'mvc_site',
-		'user' => 'root',
-		'password' => '',
-	);
+			'host' => 'localhost',
+			'dbname' => 'php_base',
+			'user' => 'root',
+			'password' => '',
+);

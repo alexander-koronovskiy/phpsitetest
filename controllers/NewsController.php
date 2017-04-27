@@ -1,31 +1,33 @@
 <?php
 
-include_once ROOT . '/models/News.php';
+include_once ROOT. '/models/News.php';
 
-class NewsController
-{
-	public function actionIndex(){
+class NewsController {
+
+	public function actionIndex()
+	{
 		
-		//обращение статически к методам в модели News
 		$newsList = array();
 		$newsList = News::getNewsList();
-		
-		print_r($newsList);
-		
-		require_once(ROOT. '/views/news/index.php');
-		
+
+		require_once(ROOT . '/views/news/index.php');
+
 		return true;
 	}
-	
+
 	public function actionView($id)
 	{
-		if ($id){
-			$newsItem = News::getNewsItemById($id);
-			
-			print_r($newsItem);
-			echo 'actionView';
+		if ($id) {
+			$newsItem = News::getNewsItemByID($id);
+
+	require_once(ROOT . '/views/news/view.php');
+
+/*			echo 'actionView'; */
 		}
-		
+
 		return true;
+
 	}
+
 }
+
